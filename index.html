@@ -1,0 +1,1284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OFFHOUR HERBS | Wholesale Herbal Tea Solutions</title>
+  <meta name="description" content="OFFHOUR HERBS provides premium herbal tea solutions for wholesale buyers, private label brands, distributors, and custom packaging projects." />
+  <style>
+    :root {
+      --cream: #f7f0e6;
+      --cream-2: #efe3d1;
+      --sage: #9fb29a;
+      --sage-light: #dbe4d4;
+      --olive: #43533f;
+      --deep: #1f2924;
+      --charcoal: #252b2a;
+      --gold: #b99762;
+      --rose: #b86668;
+      --white: #ffffff;
+      --muted: #6f766f;
+      --line: rgba(31, 41, 36, 0.12);
+      --shadow: 0 24px 70px rgba(31, 41, 36, 0.13);
+      --radius: 28px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Inter, Arial, Helvetica, sans-serif;
+      color: var(--deep);
+      background: var(--cream);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--olive);
+      background: rgba(255, 255, 255, 0.56);
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: var(--gold);
+    }
+
+    .btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 48px;
+      padding: 0 24px;
+      border-radius: 999px;
+      font-weight: 700;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+      cursor: pointer;
+      border: 0;
+    }
+
+    .btn-primary {
+      background: var(--deep);
+      color: var(--white);
+      box-shadow: 0 14px 34px rgba(31, 41, 36, 0.18);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 20px 44px rgba(31, 41, 36, 0.25);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.62);
+      color: var(--deep);
+      border: 1px solid var(--line);
+    }
+
+    .section {
+      padding: 92px 0;
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 42px;
+      align-items: end;
+      margin-bottom: 42px;
+    }
+
+    .section-head h2 {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: clamp(34px, 4vw, 58px);
+      line-height: 1.04;
+      letter-spacing: -0.04em;
+      color: var(--deep);
+    }
+
+    .section-head p {
+      color: var(--muted);
+      font-size: 17px;
+      max-width: 540px;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(16px);
+      background: rgba(247, 240, 230, 0.82);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 900;
+      letter-spacing: 0.1em;
+      font-size: 14px;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      background: radial-gradient(circle at 50% 12%, var(--deep) 0 13%, transparent 14%),
+        radial-gradient(circle at 50% 88%, var(--deep) 0 13%, transparent 14%),
+        radial-gradient(circle at 12% 50%, var(--deep) 0 13%, transparent 14%),
+        radial-gradient(circle at 88% 50%, var(--deep) 0 13%, transparent 14%),
+        var(--cream-2);
+      border: 1px solid rgba(31, 41, 36, 0.2);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      color: var(--olive);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    nav a:hover {
+      color: var(--deep);
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      min-height: 820px;
+      display: flex;
+      align-items: center;
+      background:
+        radial-gradient(circle at 10% 72%, rgba(184, 102, 104, 0.20), transparent 26%),
+        radial-gradient(circle at 86% 20%, rgba(159, 178, 154, 0.55), transparent 34%),
+        linear-gradient(118deg, #f8efe1 0%, #f3eadc 44%, #d9e4d1 100%);
+    }
+
+    .hero::before,
+    .hero::after {
+      content: "";
+      position: absolute;
+      border-radius: 999px;
+      filter: blur(2px);
+      opacity: 0.8;
+      pointer-events: none;
+    }
+
+    .hero::before {
+      width: 560px;
+      height: 560px;
+      right: -170px;
+      bottom: -190px;
+      background: radial-gradient(circle, rgba(67, 83, 63, 0.18), transparent 68%);
+    }
+
+    .hero::after {
+      width: 420px;
+      height: 420px;
+      left: -140px;
+      top: 140px;
+      background: radial-gradient(circle, rgba(185, 151, 98, 0.22), transparent 70%);
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1.06fr 0.94fr;
+      gap: 54px;
+      align-items: center;
+      padding: 78px 0;
+    }
+
+    .hero h1 {
+      margin-top: 20px;
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: clamp(52px, 6.9vw, 92px);
+      line-height: 0.96;
+      letter-spacing: -0.065em;
+      color: var(--deep);
+      max-width: 800px;
+    }
+
+    .hero .lead {
+      margin-top: 24px;
+      font-size: clamp(18px, 2vw, 22px);
+      color: #4a554d;
+      max-width: 640px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 34px;
+    }
+
+    .hero-proof {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 44px;
+      max-width: 690px;
+    }
+
+    .proof-card {
+      padding: 18px;
+      border-radius: 22px;
+      background: rgba(255,255,255,0.54);
+      border: 1px solid rgba(31,41,36,0.10);
+    }
+
+    .proof-card strong {
+      display: block;
+      font-size: 18px;
+      color: var(--deep);
+    }
+
+    .proof-card span {
+      font-size: 12px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 800;
+    }
+
+    .visual-card {
+      position: relative;
+      min-height: 590px;
+      border-radius: 42px;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 80% 22%, rgba(255,255,255,0.9), transparent 28%),
+        linear-gradient(150deg, rgba(255,255,255,0.72), rgba(255,255,255,0.26)),
+        #e9decd;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(255,255,255,0.65);
+    }
+
+    .tea-bowl {
+      position: absolute;
+      width: 380px;
+      height: 380px;
+      right: -72px;
+      top: 58px;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 50% 50%, rgba(78, 72, 46, 0.08) 0 25%, transparent 26%),
+        radial-gradient(circle at 48% 50%, #6b5a32 0 4%, transparent 5%),
+        radial-gradient(circle at 42% 42%, #b9826f 0 3%, transparent 4%),
+        radial-gradient(circle at 58% 56%, #d9c46d 0 3%, transparent 4%),
+        radial-gradient(circle at 34% 55%, #6d8a58 0 4%, transparent 5%),
+        radial-gradient(circle at 63% 37%, #c96c70 0 4%, transparent 5%),
+        radial-gradient(circle, #efe6d7 0 56%, #d8c7aa 57% 62%, transparent 63%);
+      box-shadow: 0 24px 60px rgba(31, 41, 36, 0.14);
+    }
+
+    .packaging {
+      position: absolute;
+      left: 48px;
+      bottom: 54px;
+      width: 250px;
+      height: 350px;
+      border-radius: 26px 26px 18px 18px;
+      background: linear-gradient(160deg, #f9f3ea, #ded0b7);
+      border: 1px solid rgba(31, 41, 36, 0.12);
+      box-shadow: 0 28px 60px rgba(31, 41, 36, 0.18);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 26px;
+    }
+
+    .packaging::before {
+      content: "OFFHOUR HERBS";
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      font-weight: 900;
+      color: var(--deep);
+      margin-bottom: 36px;
+    }
+
+    .packaging::after {
+      content: "PRIVATE LABEL READY";
+      border-top: 1px solid rgba(31,41,36,0.18);
+      border-bottom: 1px solid rgba(31,41,36,0.18);
+      padding: 13px 0;
+      width: 100%;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      color: var(--olive);
+    }
+
+    .floating-note {
+      position: absolute;
+      right: 34px;
+      bottom: 36px;
+      width: 250px;
+      padding: 18px;
+      border-radius: 22px;
+      background: rgba(31, 41, 36, 0.86);
+      color: var(--white);
+      box-shadow: 0 20px 45px rgba(31, 41, 36, 0.22);
+    }
+
+    .floating-note span {
+      display: block;
+      color: #d8c7aa;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .floating-note p {
+      font-size: 15px;
+      line-height: 1.45;
+    }
+
+    .botanical-line {
+      position: absolute;
+      left: 28px;
+      top: 36px;
+      width: 240px;
+      height: 160px;
+      opacity: 0.65;
+      background:
+        radial-gradient(ellipse at 20% 78%, rgba(67,83,63,0.75) 0 8%, transparent 9%),
+        radial-gradient(ellipse at 45% 55%, rgba(67,83,63,0.65) 0 9%, transparent 10%),
+        radial-gradient(ellipse at 66% 34%, rgba(67,83,63,0.55) 0 8%, transparent 9%);
+      transform: rotate(-18deg);
+    }
+
+    .botanical-line::before {
+      content: "";
+      position: absolute;
+      left: 32px;
+      top: 28px;
+      width: 160px;
+      height: 2px;
+      background: rgba(67,83,63,0.38);
+      transform: rotate(-24deg);
+    }
+
+    .marquee {
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      background: rgba(255,255,255,0.34);
+      overflow: hidden;
+    }
+
+    .marquee-inner {
+      display: flex;
+      gap: 42px;
+      white-space: nowrap;
+      padding: 18px 0;
+      color: var(--olive);
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 13px;
+      animation: scroll 26s linear infinite;
+    }
+
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .categories {
+      background: #fbf7ef;
+    }
+
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .category-card {
+      min-height: 320px;
+      border-radius: var(--radius);
+      padding: 24px;
+      background: linear-gradient(160deg, rgba(255,255,255,0.82), rgba(245,238,225,0.72));
+      border: 1px solid rgba(31,41,36,0.08);
+      box-shadow: 0 18px 48px rgba(31,41,36,0.08);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .category-card::before {
+      content: "";
+      position: absolute;
+      inset: auto -34px -42px auto;
+      width: 170px;
+      height: 170px;
+      border-radius: 50%;
+      opacity: 0.7;
+      background: radial-gradient(circle, var(--sage-light), transparent 70%);
+    }
+
+    .category-card:nth-child(2)::before { background: radial-gradient(circle, rgba(184,102,104,0.18), transparent 70%); }
+    .category-card:nth-child(3)::before { background: radial-gradient(circle, rgba(185,151,98,0.24), transparent 70%); }
+    .category-card:nth-child(4)::before { background: radial-gradient(circle, rgba(67,83,63,0.15), transparent 70%); }
+
+    .category-icon {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background: var(--cream-2);
+      border: 1px solid var(--line);
+      position: relative;
+    }
+
+    .category-icon::before,
+    .category-icon::after {
+      content: "";
+      position: absolute;
+      border-radius: 999px 999px 999px 0;
+      background: var(--olive);
+      opacity: 0.76;
+    }
+
+    .category-icon::before {
+      width: 26px;
+      height: 42px;
+      left: 17px;
+      top: 13px;
+      transform: rotate(-34deg);
+    }
+
+    .category-icon::after {
+      width: 22px;
+      height: 34px;
+      left: 33px;
+      top: 22px;
+      transform: rotate(45deg);
+    }
+
+    .category-card h3 {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 29px;
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+      margin-bottom: 12px;
+    }
+
+    .category-card p {
+      color: var(--muted);
+      font-size: 15px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .services {
+      background: linear-gradient(180deg, #fbf7ef, #eef2e8);
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: 0.92fr 1.08fr;
+      gap: 22px;
+      align-items: stretch;
+    }
+
+    .service-feature {
+      border-radius: 36px;
+      background: var(--deep);
+      color: var(--white);
+      padding: 42px;
+      min-height: 560px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-feature::after {
+      content: "";
+      position: absolute;
+      width: 440px;
+      height: 440px;
+      border-radius: 50%;
+      right: -160px;
+      top: -120px;
+      background: radial-gradient(circle, rgba(159,178,154,0.46), transparent 68%);
+    }
+
+    .service-feature h2 {
+      position: relative;
+      z-index: 2;
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: clamp(38px, 5vw, 64px);
+      line-height: 1;
+      letter-spacing: -0.05em;
+      max-width: 440px;
+    }
+
+    .service-feature p {
+      position: relative;
+      z-index: 2;
+      color: rgba(255,255,255,0.74);
+      font-size: 17px;
+      max-width: 460px;
+    }
+
+    .service-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .service-card {
+      border-radius: 30px;
+      padding: 30px;
+      background: rgba(255,255,255,0.7);
+      border: 1px solid rgba(31,41,36,0.08);
+      min-height: 270px;
+    }
+
+    .service-card .num {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--cream-2);
+      color: var(--olive);
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      margin-bottom: 26px;
+    }
+
+    .service-card h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+      letter-spacing: -0.02em;
+    }
+
+    .service-card p {
+      color: var(--muted);
+    }
+
+    .packaging-section {
+      background: #eef2e8;
+    }
+
+    .packaging-grid {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 22px;
+      align-items: center;
+    }
+
+    .mockup-stage {
+      min-height: 540px;
+      border-radius: 38px;
+      background:
+        radial-gradient(circle at 76% 24%, rgba(185,151,98,0.23), transparent 28%),
+        linear-gradient(135deg, #f9f4ea, #d9e4d1);
+      border: 1px solid rgba(31,41,36,0.08);
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .pouch {
+      position: absolute;
+      bottom: 74px;
+      width: 190px;
+      height: 300px;
+      border-radius: 24px 24px 16px 16px;
+      background: linear-gradient(160deg, #fffaf1, #d8c8ad);
+      box-shadow: 0 24px 60px rgba(31, 41, 36, 0.16);
+      border: 1px solid rgba(31,41,36,0.12);
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 24px;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      font-size: 12px;
+    }
+
+    .pouch.one { left: 98px; transform: rotate(-5deg); }
+    .pouch.two { left: 270px; bottom: 102px; background: linear-gradient(160deg, #4a5945, #253028); color: var(--white); transform: rotate(3deg); }
+    .pouch.three { left: 438px; transform: rotate(-2deg); background: linear-gradient(160deg, #efe2cf, #b99762); }
+
+    .pack-copy {
+      padding: 22px;
+    }
+
+    .pack-copy h2 {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: clamp(36px, 5vw, 62px);
+      line-height: 1.02;
+      letter-spacing: -0.05em;
+      margin-bottom: 22px;
+    }
+
+    .pack-copy p {
+      color: var(--muted);
+      font-size: 17px;
+      margin-bottom: 24px;
+    }
+
+    .check-list {
+      list-style: none;
+      display: grid;
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .check-list li {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      color: var(--deep);
+      font-weight: 700;
+    }
+
+    .check-list li::before {
+      content: "✓";
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: var(--sage-light);
+      color: var(--olive);
+      flex: 0 0 auto;
+      font-size: 13px;
+      margin-top: 1px;
+    }
+
+    .process {
+      background: #fbf7ef;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 14px;
+      counter-reset: step;
+    }
+
+    .step {
+      counter-increment: step;
+      min-height: 230px;
+      border-radius: 28px;
+      padding: 24px;
+      background: rgba(255,255,255,0.72);
+      border: 1px solid rgba(31,41,36,0.08);
+      position: relative;
+    }
+
+    .step::before {
+      content: "0" counter(step);
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 46px;
+      line-height: 1;
+      color: rgba(67,83,63,0.25);
+    }
+
+    .step h3 {
+      margin: 42px 0 8px;
+      font-size: 19px;
+    }
+
+    .step p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .about {
+      background: linear-gradient(180deg, #fbf7ef, #f0eadf);
+    }
+
+    .about-card {
+      border-radius: 42px;
+      background:
+        linear-gradient(90deg, rgba(31,41,36,0.86), rgba(31,41,36,0.62)),
+        radial-gradient(circle at 80% 20%, rgba(185,151,98,0.18), transparent 32%);
+      color: var(--white);
+      padding: 58px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .about-card h2 {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: clamp(36px, 5vw, 64px);
+      line-height: 1;
+      letter-spacing: -0.05em;
+    }
+
+    .about-card p {
+      color: rgba(255,255,255,0.78);
+      font-size: 17px;
+      margin-bottom: 24px;
+    }
+
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 34px;
+    }
+
+    .metric {
+      padding: 20px;
+      border-radius: 22px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .metric strong {
+      display: block;
+      font-size: 28px;
+      line-height: 1;
+    }
+
+    .metric span {
+      color: rgba(255,255,255,0.68);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      font-weight: 800;
+    }
+
+    .contact {
+      background: #f0eadf;
+      padding-bottom: 120px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 0.92fr 1.08fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .contact-copy {
+      padding: 44px;
+      border-radius: 36px;
+      background: linear-gradient(145deg, #dbe4d4, #f7f0e6);
+      border: 1px solid rgba(31,41,36,0.08);
+    }
+
+    .contact-copy h2 {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: clamp(38px, 5vw, 62px);
+      line-height: 1;
+      letter-spacing: -0.05em;
+      margin: 18px 0;
+    }
+
+    .contact-copy p {
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .contact-details {
+      margin-top: 34px;
+      display: grid;
+      gap: 12px;
+      font-weight: 800;
+      color: var(--olive);
+    }
+
+    form {
+      border-radius: 36px;
+      background: rgba(255,255,255,0.78);
+      border: 1px solid rgba(31,41,36,0.08);
+      box-shadow: var(--shadow);
+      padding: 34px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    label {
+      display: grid;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--olive);
+      font-weight: 900;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      border: 1px solid rgba(31,41,36,0.14);
+      background: #fffdf8;
+      border-radius: 16px;
+      padding: 14px 15px;
+      font: inherit;
+      color: var(--deep);
+      outline: none;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: var(--olive);
+    }
+
+    .full {
+      grid-column: 1 / -1;
+    }
+
+    textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    footer {
+      background: var(--deep);
+      color: rgba(255,255,255,0.72);
+      padding: 34px 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      font-size: 14px;
+    }
+
+    .footer-inner strong {
+      color: var(--white);
+      letter-spacing: 0.1em;
+    }
+
+    @media (max-width: 980px) {
+      nav ul {
+        display: none;
+      }
+
+      .hero-grid,
+      .section-head,
+      .service-grid,
+      .packaging-grid,
+      .about-card,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .visual-card {
+        min-height: 520px;
+      }
+
+      .category-grid,
+      .service-list {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        width: min(100% - 28px, 1180px);
+      }
+
+      .nav {
+        height: 68px;
+      }
+
+      .brand span {
+        display: none;
+      }
+
+      .hero h1 {
+        font-size: 48px;
+      }
+
+      .hero-proof,
+      .category-grid,
+      .service-list,
+      .process-grid,
+      .metric-grid,
+      form {
+        grid-template-columns: 1fr;
+      }
+
+      .section {
+        padding: 70px 0;
+      }
+
+      .visual-card {
+        min-height: 460px;
+      }
+
+      .tea-bowl {
+        width: 300px;
+        height: 300px;
+      }
+
+      .packaging {
+        left: 28px;
+        bottom: 42px;
+        width: 210px;
+        height: 290px;
+      }
+
+      .floating-note {
+        left: 28px;
+        right: 28px;
+        width: auto;
+      }
+
+      .pouch.one { left: 34px; }
+      .pouch.two { left: 142px; }
+      .pouch.three { left: 250px; }
+
+      .about-card,
+      .contact-copy,
+      form,
+      .service-feature {
+        padding: 28px;
+        border-radius: 28px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="#top" class="brand" aria-label="OFFHOUR HERBS home">
+        <div class="brand-mark" aria-hidden="true"></div>
+        <span>OFFHOUR HERBS</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <ul>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#private-label">Private Label</a></li>
+          <li><a href="#packaging">Packaging</a></li>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn-primary" href="#contact">Get a Quote</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Wholesale · Private Label · Custom Blends</div>
+          <h1>Botanical Tea Solutions for Modern Brands</h1>
+          <p class="lead">OFFHOUR HERBS helps distributors, retailers, wellness brands, and private-label partners create premium herbal tea products with elevated taste, packaging, and supply support.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">Request Wholesale Quote</a>
+            <a class="btn btn-secondary" href="#products">View Product Range</a>
+          </div>
+          <div class="hero-proof" aria-label="B2B capabilities">
+            <div class="proof-card"><strong>Bulk Supply</strong><span>Wholesale ready</span></div>
+            <div class="proof-card"><strong>Private Label</strong><span>Brand packaging</span></div>
+            <div class="proof-card"><strong>Custom Blends</strong><span>Market focused</span></div>
+          </div>
+        </div>
+        <div class="visual-card" aria-label="Premium herbal tea packaging visual">
+          <div class="botanical-line"></div>
+          <div class="tea-bowl"></div>
+          <div class="packaging"></div>
+          <div class="floating-note">
+            <span>B2B Ready</span>
+            <p>From sample evaluation to bulk production and custom packaging, we support brand-focused herbal tea projects.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-inner">
+        <span>Wholesale Herbal Tea</span><span>Private Label Packaging</span><span>Custom Botanical Blends</span><span>Bulk Supply</span><span>Sample Support</span><span>Wellness Tea Concepts</span>
+        <span>Wholesale Herbal Tea</span><span>Private Label Packaging</span><span>Custom Botanical Blends</span><span>Bulk Supply</span><span>Sample Support</span><span>Wellness Tea Concepts</span>
+      </div>
+    </div>
+
+    <section class="section categories" id="products">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Product Range</div>
+            <h2>Premium herbal teas made for business buyers.</h2>
+          </div>
+          <p>Build your product line with clean, elevated herbal tea categories that are easy for wholesale buyers, distributors, and private-label brands to understand.</p>
+        </div>
+
+        <div class="category-grid">
+          <article class="category-card">
+            <div class="category-icon"></div>
+            <div>
+              <h3>Floral Herbal Tea</h3>
+              <p>Rose, chamomile, jasmine, chrysanthemum, and other botanical ingredients for elegant floral tea products.</p>
+            </div>
+          </article>
+          <article class="category-card">
+            <div class="category-icon"></div>
+            <div>
+              <h3>Fruit Tea Blends</h3>
+              <p>Colorful fruit-and-flower blends designed for refreshing wellness, lifestyle, and gifting product lines.</p>
+            </div>
+          </article>
+          <article class="category-card">
+            <div class="category-icon"></div>
+            <div>
+              <h3>Wellness Blends</h3>
+              <p>Botanical concepts for daily balance, relaxation, beauty, sleep, energy, and modern wellness positioning.</p>
+            </div>
+          </article>
+          <article class="category-card">
+            <div class="category-icon"></div>
+            <div>
+              <h3>Tea Bags & Loose Leaf</h3>
+              <p>Flexible formats for retail shelves, subscription boxes, wellness stores, cafés, and corporate gifting programs.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section services" id="private-label">
+      <div class="container service-grid">
+        <div class="service-feature">
+          <h2>Designed for wholesale, not one-by-one retail.</h2>
+          <p>Your buyers should immediately know that OFFHOUR HERBS supports B2B cooperation: bulk orders, private label packaging, custom blends, and sample-before-production workflows.</p>
+        </div>
+
+        <div class="service-list">
+          <article class="service-card">
+            <div class="num">01</div>
+            <h3>Bulk Orders</h3>
+            <p>Wholesale supply for distributors, retailers, wellness brands, tea shops, gift channels, and corporate programs.</p>
+          </article>
+          <article class="service-card">
+            <div class="num">02</div>
+            <h3>Private Label</h3>
+            <p>Support your brand with customized labels, pouch design, box packaging, and product presentation.</p>
+          </article>
+          <article class="service-card">
+            <div class="num">03</div>
+            <h3>Custom Blends</h3>
+            <p>Create market-focused tea concepts based on flavor, function, target audience, and packaging format.</p>
+          </article>
+          <article class="service-card">
+            <div class="num">04</div>
+            <h3>Sample Support</h3>
+            <p>Evaluate appearance, aroma, taste, packaging, and cooperation details before moving into bulk production.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section packaging-section" id="packaging">
+      <div class="container packaging-grid">
+        <div class="mockup-stage" aria-label="Private label packaging mockup">
+          <div class="pouch one">LOOSE LEAF<br />POUCH</div>
+          <div class="pouch two">PRIVATE<br />LABEL</div>
+          <div class="pouch three">GIFT BOX<br />READY</div>
+        </div>
+        <div class="pack-copy">
+          <div class="eyebrow">Packaging Options</div>
+          <h2>Make your herbal tea line look premium from day one.</h2>
+          <p>For B2B buyers, packaging is not decoration — it is how the product sells. Present your brand with a clean, high-end, shelf-ready visual system.</p>
+          <ul class="check-list">
+            <li>Stand-up pouches, loose leaf bags, boxes, sachets, and gift sets</li>
+            <li>Private label support for brand owners and distributors</li>
+            <li>Packaging concepts suitable for wellness, gifting, retail, and online channels</li>
+            <li>Product presentation designed for premium herbal tea positioning</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section process" id="process">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Cooperation Process</div>
+            <h2>A clear B2B order path from inquiry to shipment.</h2>
+          </div>
+          <p>Keep the process simple for buyers. They tell you what they need, you confirm product options, prepare samples or quotation, then move into production and delivery.</p>
+        </div>
+
+        <div class="process-grid">
+          <article class="step">
+            <h3>Inquiry</h3>
+            <p>Buyer shares product type, target market, quantity, and packaging needs.</p>
+          </article>
+          <article class="step">
+            <h3>Product Match</h3>
+            <p>Recommend suitable herbal tea blends, formats, and packaging directions.</p>
+          </article>
+          <article class="step">
+            <h3>Sample</h3>
+            <p>Confirm aroma, taste, ingredients, appearance, and brand presentation.</p>
+          </article>
+          <article class="step">
+            <h3>Quote & Production</h3>
+            <p>Confirm pricing, MOQ, packaging, lead time, and bulk production details.</p>
+          </article>
+          <article class="step">
+            <h3>Shipment</h3>
+            <p>Arrange delivery for wholesale, retail, or private-label distribution needs.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="container about-card">
+        <div>
+          <div class="eyebrow">About OFFHOUR HERBS</div>
+          <h2>Curated botanical tea for modern balance.</h2>
+        </div>
+        <div>
+          <p>OFFHOUR HERBS creates herbal tea blends for modern life — helping brands serve customers who care about wellness, ritual, beauty, calm, and premium everyday enjoyment.</p>
+          <p>For business buyers, we focus on product clarity, packaging quality, and cooperation efficiency so your herbal tea line can look professional and market-ready.</p>
+          <div class="metric-grid">
+            <div class="metric"><strong>B2B</strong><span>Focused</span></div>
+            <div class="metric"><strong>OEM</strong><span>Friendly</span></div>
+            <div class="metric"><strong>Bulk</strong><span>Supply</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-copy">
+          <div class="eyebrow">Wholesale Inquiry</div>
+          <h2>Looking for a premium herbal tea partner?</h2>
+          <p>Tell us your product needs, estimated quantity, packaging requirement, and target market. We will help you choose suitable herbal tea solutions for wholesale or private label cooperation.</p>
+          <div class="contact-details">
+            <span>Email: sales@offhourherbs.com</span>
+            <span>Use this form for: wholesale, private label, packaging, samples</span>
+          </div>
+        </div>
+
+        <form action="mailto:sales@offhourherbs.com" method="post" enctype="text/plain">
+          <label>
+            Name
+            <input type="text" name="Name" placeholder="Your name" required />
+          </label>
+          <label>
+            Email
+            <input type="email" name="Email" placeholder="your@email.com" required />
+          </label>
+          <label>
+            Company
+            <input type="text" name="Company" placeholder="Company name" />
+          </label>
+          <label>
+            Country / Region
+            <input type="text" name="Country" placeholder="United States" />
+          </label>
+          <label>
+            Interested Product
+            <select name="Interested Product">
+              <option>Floral Herbal Tea</option>
+              <option>Fruit Tea Blends</option>
+              <option>Wellness Tea Blends</option>
+              <option>Tea Bags</option>
+              <option>Loose Leaf Tea</option>
+              <option>Private Label Packaging</option>
+            </select>
+          </label>
+          <label>
+            Estimated Quantity
+            <input type="text" name="Quantity" placeholder="e.g. 1,000 units / 5,000 units" />
+          </label>
+          <label class="full">
+            Message
+            <textarea name="Message" placeholder="Please describe your product needs, packaging requirements, target market, and timeline."></textarea>
+          </label>
+          <div class="full">
+            <button class="btn btn-primary" type="submit">Submit Wholesale Inquiry</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <strong>OFFHOUR HERBS</strong>
+      <span>Wholesale Herbal Tea · Private Label · Custom Packaging</span>
+      <span>© 2026 OFFHOUR HERBS. All rights reserved.</span>
+    </div>
+  </footer>
+</body>
+</html>
