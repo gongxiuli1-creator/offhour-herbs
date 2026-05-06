@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>OFFHOUR HERBS | Wholesale Herbal Tea H5 Landing Page</title>
+  <meta name="description" content="Premium wholesale herbal tea, private label, custom blends, and bulk supply by OFFHOUR HERBS." />
+  <style>
+    :root {
+      --cream: #f8f1e7;
+      --paper: #fffaf2;
+      --sage: #dce6d5;
+      --sage-deep: #40513f;
+      --olive: #24332c;
+      --muted: #6d746c;
+      --gold: #b89761;
+      --rose: #b96a6b;
+      --line: rgba(36, 51, 44, .12);
+      --shadow: 0 20px 50px rgba(36, 51, 44, .14);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      background: var(--cream);
+      color: var(--olive);
+      line-height: 1.55;
+      padding-bottom: 86px;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    .wrap { width: min(100% - 28px, 520px); margin: 0 auto; }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      background: rgba(248, 241, 231, .86);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--line);
+    }
+    .topbar-inner {
+      min-height: 64px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: .09em;
+    }
+    .mark {
+      width: 36px;
+      height: 36px;
+      border-radius: 12px;
+      border: 1px solid rgba(36, 51, 44, .16);
+      background:
+        radial-gradient(circle at 50% 13%, var(--olive) 0 13%, transparent 14%),
+        radial-gradient(circle at 50% 87%, var(--olive) 0 13%, transparent 14%),
+        radial-gradient(circle at 13% 50%, var(--olive) 0 13%, transparent 14%),
+        radial-gradient(circle at 87% 50%, var(--olive) 0 13%, transparent 14%),
+        #efe2cf;
+    }
+    .top-cta {
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: var(--olive);
+      color: white;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 34px 0 28px;
+      background:
+        radial-gradient(circle at 12% 82%, rgba(185, 106, 107, .20), transparent 28%),
+        radial-gradient(circle at 90% 0%, rgba(64, 81, 63, .26), transparent 34%),
+        linear-gradient(145deg, #fbf4ea 0%, #f5ead8 52%, #dce6d5 100%);
+      border-bottom-left-radius: 34px;
+      border-bottom-right-radius: 34px;
+    }
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 7px 11px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.54);
+      color: var(--sage-deep);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .tag::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--gold);
+    }
+    h1 {
+      margin-top: 18px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(45px, 13vw, 64px);
+      line-height: .96;
+      letter-spacing: -.06em;
+      max-width: 460px;
+    }
+    .lead {
+      margin-top: 18px;
+      color: #4f5b52;
+      font-size: 17px;
+      max-width: 455px;
+    }
+    .hero-actions {
+      margin-top: 24px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    .btn {
+      min-height: 50px;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-weight: 900;
+      font-size: 14px;
+      border: 1px solid var(--line);
+    }
+    .btn-primary { background: var(--olive); color: #fff; border-color: var(--olive); box-shadow: 0 14px 30px rgba(36, 51, 44, .22); }
+    .btn-light { background: rgba(255,255,255,.62); color: var(--olive); }
+
+    .visual {
+      margin-top: 26px;
+      height: 260px;
+      border-radius: 30px;
+      background:
+        radial-gradient(circle at 74% 26%, rgba(255,255,255,.92), transparent 28%),
+        linear-gradient(155deg, rgba(255,255,255,.70), rgba(255,255,255,.18)),
+        #e6d7c4;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(255,255,255,.7);
+      position: relative;
+      overflow: hidden;
+    }
+    .bowl {
+      position: absolute;
+      width: 190px;
+      height: 190px;
+      right: -38px;
+      top: 18px;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 42% 42%, #b9826f 0 4%, transparent 5%),
+        radial-gradient(circle at 58% 56%, #d9c46d 0 4%, transparent 5%),
+        radial-gradient(circle at 34% 55%, #6d8a58 0 5%, transparent 6%),
+        radial-gradient(circle at 63% 37%, #c96c70 0 5%, transparent 6%),
+        radial-gradient(circle, #efe6d7 0 56%, #d8c7aa 57% 62%, transparent 63%);
+      box-shadow: 0 20px 40px rgba(36, 51, 44, .13);
+    }
+    .pouch {
+      position: absolute;
+      left: 30px;
+      bottom: 28px;
+      width: 125px;
+      height: 180px;
+      border-radius: 20px 20px 12px 12px;
+      background: linear-gradient(160deg, #fff8ef, #d6c4a5);
+      box-shadow: 0 20px 42px rgba(36, 51, 44, .18);
+      border: 1px solid rgba(36, 51, 44, .12);
+      display: grid;
+      place-items: center;
+      text-align: center;
+      font-weight: 900;
+      letter-spacing: .08em;
+      font-size: 10px;
+      padding: 14px;
+    }
+    .note {
+      position: absolute;
+      right: 18px;
+      bottom: 18px;
+      width: 190px;
+      background: rgba(36, 51, 44, .88);
+      color: #fff;
+      border-radius: 20px;
+      padding: 14px;
+      font-size: 13px;
+      line-height: 1.4;
+    }
+    .note strong { display: block; color: #e8d4ad; font-size: 11px; letter-spacing: .09em; text-transform: uppercase; margin-bottom: 3px; }
+
+    .section { padding: 42px 0; }
+    .section-title { margin-bottom: 18px; }
+    .section-title h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 34px;
+      line-height: 1.02;
+      letter-spacing: -.045em;
+    }
+    .section-title p { margin-top: 10px; color: var(--muted); font-size: 15px; }
+
+    .quick-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    .quick-card {
+      min-height: 128px;
+      border-radius: 24px;
+      padding: 16px;
+      background: rgba(255,255,255,.66);
+      border: 1px solid rgba(36,51,44,.08);
+      box-shadow: 0 14px 34px rgba(36,51,44,.07);
+    }
+    .quick-card span {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: var(--sage);
+      color: var(--sage-deep);
+      font-weight: 900;
+      margin-bottom: 12px;
+    }
+    .quick-card h3 { font-size: 17px; line-height: 1.1; margin-bottom: 6px; }
+    .quick-card p { color: var(--muted); font-size: 13px; }
+
+    .product-list { display: grid; gap: 12px; }
+    .product-item {
+      display: grid;
+      grid-template-columns: 78px 1fr;
+      gap: 14px;
+      align-items: center;
+      padding: 12px;
+      border-radius: 24px;
+      background: rgba(255,255,255,.70);
+      border: 1px solid rgba(36,51,44,.08);
+      box-shadow: 0 12px 30px rgba(36,51,44,.06);
+    }
+    .product-img {
+      height: 78px;
+      border-radius: 18px;
+      background:
+        radial-gradient(circle at 42% 38%, rgba(185,106,107,.35), transparent 22%),
+        radial-gradient(circle at 62% 62%, rgba(184,151,97,.34), transparent 24%),
+        linear-gradient(145deg, #eee1cd, #dce6d5);
+    }
+    .product-item h3 { font-size: 18px; margin-bottom: 3px; }
+    .product-item p { color: var(--muted); font-size: 13px; }
+
+    .dark-card {
+      border-radius: 30px;
+      padding: 24px;
+      background: var(--olive);
+      color: #fff;
+      box-shadow: var(--shadow);
+    }
+    .dark-card h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 34px;
+      line-height: 1.02;
+      letter-spacing: -.045em;
+      margin-bottom: 12px;
+    }
+    .dark-card p { color: rgba(255,255,255,.74); }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+    .chip {
+      padding: 8px 11px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.10);
+      border: 1px solid rgba(255,255,255,.13);
+      color: rgba(255,255,255,.86);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .steps { display: grid; gap: 10px; counter-reset: step; }
+    .step {
+      counter-increment: step;
+      display: grid;
+      grid-template-columns: 42px 1fr;
+      gap: 12px;
+      align-items: start;
+      padding: 16px;
+      border-radius: 22px;
+      background: rgba(255,255,255,.66);
+      border: 1px solid rgba(36,51,44,.08);
+    }
+    .step::before {
+      content: "0" counter(step);
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: var(--sage);
+      color: var(--sage-deep);
+      font-weight: 900;
+    }
+    .step h3 { font-size: 16px; margin-bottom: 2px; }
+    .step p { font-size: 13px; color: var(--muted); }
+
+    .form-card {
+      border-radius: 30px;
+      padding: 22px;
+      background: rgba(255,255,255,.78);
+      border: 1px solid rgba(36,51,44,.08);
+      box-shadow: var(--shadow);
+    }
+    label {
+      display: grid;
+      gap: 7px;
+      margin-bottom: 13px;
+      font-size: 12px;
+      font-weight: 900;
+      color: var(--sage-deep);
+      text-transform: uppercase;
+      letter-spacing: .05em;
+    }
+    input, select, textarea {
+      width: 100%;
+      border: 1px solid rgba(36,51,44,.14);
+      background: #fffdf8;
+      border-radius: 15px;
+      padding: 13px 14px;
+      font: inherit;
+      color: var(--olive);
+      outline: none;
+    }
+    textarea { min-height: 105px; resize: vertical; }
+    input:focus, select:focus, textarea:focus { border-color: var(--sage-deep); }
+
+    .bottom-bar {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 60;
+      padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
+      background: rgba(248, 241, 231, .88);
+      backdrop-filter: blur(18px);
+      border-top: 1px solid var(--line);
+    }
+    .bottom-actions {
+      width: min(100%, 520px);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    .bottom-actions .btn { min-height: 48px; }
+
+    footer {
+      padding: 28px 0 36px;
+      color: var(--muted);
+      text-align: center;
+      font-size: 12px;
+    }
+
+    @media (min-width: 720px) {
+      body { background: #efe6d9; }
+      .phone-frame {
+        max-width: 560px;
+        margin: 0 auto;
+        background: var(--cream);
+        min-height: 100vh;
+        box-shadow: 0 0 0 1px rgba(36,51,44,.08), 0 30px 80px rgba(36,51,44,.16);
+      }
+      .bottom-bar { left: 50%; transform: translateX(-50%); width: 560px; border-radius: 24px 24px 0 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="phone-frame">
+    <header class="topbar">
+      <div class="wrap topbar-inner">
+        <a href="#top" class="brand">
+          <span class="mark"></span>
+          <span>OFFHOUR HERBS</span>
+        </a>
+        <a href="#quote" class="top-cta">Quote</a>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="wrap">
+          <span class="tag">B2B Herbal Tea Partner</span>
+          <h1>Premium Herbal Tea for Wholesale Brands</h1>
+          <p class="lead">Custom blends, private label packaging, and bulk supply for retailers, distributors, wellness brands, and gift channels.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#quote">Get Quote</a>
+            <a class="btn btn-light" href="#products">View Products</a>
+          </div>
+          <div class="visual" aria-label="Premium herbal tea packaging visual">
+            <div class="bowl"></div>
+            <div class="pouch">PRIVATE<br>LABEL<br>READY</div>
+            <div class="note"><strong>Wholesale Ready</strong>Bulk order · Custom packaging · Sample support</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="section-title">
+            <span class="tag">Why Buyers Choose Us</span>
+            <h2>One clear partner for B2B herbal tea projects.</h2>
+          </div>
+          <div class="quick-grid">
+            <div class="quick-card"><span>1</span><h3>Bulk Supply</h3><p>Wholesale-ready herbal tea formats for business buyers.</p></div>
+            <div class="quick-card"><span>2</span><h3>Private Label</h3><p>Brand labels, pouches, boxes, and gift packaging support.</p></div>
+            <div class="quick-card"><span>3</span><h3>Custom Blends</h3><p>Floral, fruit, and wellness concepts for target markets.</p></div>
+            <div class="quick-card"><span>4</span><h3>Samples First</h3><p>Confirm taste, aroma, and packaging before bulk order.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="products">
+        <div class="wrap">
+          <div class="section-title">
+            <span class="tag">Product Range</span>
+            <h2>High-end products buyers can understand fast.</h2>
+            <p>Designed for wholesale, private label, gifting, wellness, and retail shelf presentation.</p>
+          </div>
+          <div class="product-list">
+            <div class="product-item"><div class="product-img"></div><div><h3>Floral Herbal Tea</h3><p>Rose, chamomile, jasmine, chrysanthemum and botanical blends.</p></div></div>
+            <div class="product-item"><div class="product-img"></div><div><h3>Fruit Tea Blends</h3><p>Colorful fruit-and-flower blends for lifestyle and wellness markets.</p></div></div>
+            <div class="product-item"><div class="product-img"></div><div><h3>Wellness Tea Concepts</h3><p>Relaxation, beauty, sleep, balance, and daily wellness positioning.</p></div></div>
+            <div class="product-item"><div class="product-img"></div><div><h3>Tea Bags & Loose Leaf</h3><p>Flexible formats for retail, subscription boxes, cafés, and gift sets.</p></div></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="dark-card">
+            <h2>Private label and packaging that look premium.</h2>
+            <p>For B2B buyers, packaging decides whether the product feels ready for shelves, gifts, online channels, and brand launches.</p>
+            <div class="chips">
+              <span class="chip">Stand-up Pouch</span>
+              <span class="chip">Gift Box</span>
+              <span class="chip">Tea Bags</span>
+              <span class="chip">Custom Label</span>
+              <span class="chip">Sample Pack</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="section-title">
+            <span class="tag">Order Process</span>
+            <h2>Simple B2B cooperation flow.</h2>
+          </div>
+          <div class="steps">
+            <div class="step"><div><h3>Inquiry</h3><p>Share product type, quantity, packaging needs, and target market.</p></div></div>
+            <div class="step"><div><h3>Product Match</h3><p>We recommend suitable blends and formats for your business.</p></div></div>
+            <div class="step"><div><h3>Sample Confirm</h3><p>Check taste, aroma, appearance, and packaging before production.</p></div></div>
+            <div class="step"><div><h3>Bulk Production</h3><p>Confirm quote, MOQ, lead time, and delivery arrangement.</p></div></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="quote">
+        <div class="wrap">
+          <div class="section-title">
+            <span class="tag">Wholesale Inquiry</span>
+            <h2>Tell us what you want to source.</h2>
+            <p>Use this form for wholesale, private label, custom blends, packaging, or sample requests.</p>
+          </div>
+          <form class="form-card" action="mailto:sales@offhourherbs.com" method="post" enctype="text/plain">
+            <label>Name<input type="text" name="Name" placeholder="Your name" required></label>
+            <label>Email<input type="email" name="Email" placeholder="your@email.com" required></label>
+            <label>Company<input type="text" name="Company" placeholder="Company name"></label>
+            <label>Product Interest
+              <select name="Product Interest">
+                <option>Private Label Herbal Tea</option>
+                <option>Floral Herbal Tea</option>
+                <option>Fruit Tea Blends</option>
+                <option>Wellness Tea Blends</option>
+                <option>Tea Bags</option>
+                <option>Loose Leaf Tea</option>
+              </select>
+            </label>
+            <label>Estimated Quantity<input type="text" name="Estimated Quantity" placeholder="e.g. 1,000 / 5,000 units"></label>
+            <label>Message<textarea name="Message" placeholder="Tell us your target market, packaging requirement, and timeline."></textarea></label>
+            <button class="btn btn-primary" type="submit" style="width: 100%; margin-top: 4px;">Submit Inquiry</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <strong>OFFHOUR HERBS</strong><br>
+        Wholesale Herbal Tea · Private Label · Bulk Supply<br>
+        © 2026 OFFHOUR HERBS
+      </div>
+    </footer>
+  </div>
+
+  <div class="bottom-bar">
+    <div class="bottom-actions">
+      <a class="btn btn-light" href="mailto:sales@offhourherbs.com">Email</a>
+      <a class="btn btn-primary" href="#quote">Get Quote</a>
+    </div>
+  </div>
+</body>
+</html>
